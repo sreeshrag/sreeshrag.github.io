@@ -241,6 +241,51 @@
       .owl:hover .head {
         top: 5px;
       }
+      @keyframes fly {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+         /* Animation for wings up and down */
+         @keyframes left-wing {
+            0%, 100% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes right-wing {
+            0%, 100% {
+                transform: rotate(-90deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Apply the flying animation to .owl */
+        .owl {
+            animation: fly 3s infinite;
+        }
+
+        /* Apply the wings animation to .wing */
+        .wing:nth-child(1) {
+            animation: left-wing 1s infinite alternate;
+        }
+
+        .wing:nth-child(2) {
+            animation: right-wing 1s infinite alternate;
+        }
+    
     </style>
   </head>
   <body
@@ -249,14 +294,16 @@
       justify-content: center;
       align-items: center;
       height: 70vh;
-      margin: 0;
-    "
+      margin: 0;"
   >
     <div class="owl">
       <div class="body">
         <div class="wing"></div>
         <div class="wing"></div>
         <div class="feet">
+          <div class="right"></div>
+        </div>
+        <div class="feet" style="margin-left: 50px;">
           <div class="right"></div>
         </div>
         <div class="feather"></div>
