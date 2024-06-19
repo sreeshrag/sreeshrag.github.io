@@ -1,1041 +1,673 @@
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-  <!--<![endif]-->
+<html lang="en">
 
-  <head>
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8" />
-    <title>Sreesh</title>
-    <meta
-      name="description"
-      content="Hello, I'm Sreeshrag. I am a 23-year-old software developer from Kollam, Kerala.
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sreeshrag</title>
+  <meta name="description" content="Hello, I'm Sreeshrag. I am a 23-year-old software developer from Kollam, Kerala.
   Technology has always been a passion of mine, and as a software developer, I am constantly 
   finding new ways to push the boundaries of what's possible. I currently work at Cybmirror Innovations,
    located at Kollam Technopark. In my free time, I enjoy exploring my interests in art and music, which I believe add 
    depth and perspective to my work as a developer. I am driven 
- by a desire to create innovative solutions and am always looking for ways to challenge myself and grow in my profession."
-    />
-    <meta name="author" content="Sreeshrag" />
-    <meta content="" name="Sreeshrag" />
-    <meta
-      name="keywords"
-      content="Sreeshrag, Sreesh, Sreesh rag, sreesh, sreeshrag, Cybmirror Innovations, Kollam Technopark,"
-    />
+ by a desire to create innovative solutions and am always looking for ways to challenge myself and grow in my profession.">
+ <meta name="author" content="Sreeshrag">
+  <meta content="" name="Sreeshrag">
+<meta name="keywords" content="Sreeshrag, Sreesh, Sreesh rag, sreesh, sreeshrag, Cybmirror Innovations, Kollam Technopark,">
 
-    <!-- mobile specific metas
-    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/vendor.css" />
-    <link rel="stylesheet" href="css/main.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <meta
-      name="google-site-verification"
-      content="Gh29xYB39h-Rw6y8YwvXo4OffjSYZGFth1NsMJ3L4aM"
-    />
-  </head>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
-  <body id="top">
-    <!-- header
-    ================================================== -->
-    <header class="s-header">
-      <div class="header-logo">
-        <a class="site-logo" href="index.html">
-          <img src="images/logo.png" alt="Homepage" />
-        </a>
+
+  <meta name="google-site-verification" content="Gh29xYB39h-Rw6y8YwvXo4OffjSYZGFth1NsMJ3L4aM" />
+  
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">SREESHRAG</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/sreeshrag" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/sreesh.rag/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/sreeshrag/" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+          <a href="https://www.linkedin.com/in/sreeshrag-s-20a527257/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
       </div>
 
-      <nav class="header-nav">
-        <a href="#0" class="header-nav__close" title="close"
-          ><span>Close</span></a
-        >
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
 
-        <div class="header-nav__content">
-          <h3>Navigation</h3>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Sreeshrag S</h1>
+      <p>I'm <span class="typed" data-typed-items="A Developer,"></span></p>
+    </div>
+  </section><!-- End Hero -->
 
-          <ul class="header-nav__list">
-            <li class="current">
-              <a class="smoothscroll" href="#home" title="home">Home</a>
-            </li>
-            <li>
-              <a class="smoothscroll" href="#about" title="about">About</a>
-            </li>
-            <li>
-              <a class="smoothscroll" href="#services" title="services"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a class="smoothscroll" href="#works" title="works">Works</a>
-            </li>
-            <li>
-              <a class="smoothscroll" href="#clients" title="clients"
-                >Clients</a
-              >
-            </li>
-            <li>
-              <a class="smoothscroll" href="#contact" title="contact"
-                >Contact</a
-              >
-            </li>
-          </ul>
+  <main id="main">
 
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
           <p>
-            Perspiciatis hic praesentium nesciunt. Et neque a dolorum
-            <a href="#0">voluptatem</a> porro iusto sequi veritatis libero enim.
-            Iusto id suscipit veritatis neque reprehenderit.
-          </p>
-
-          <ul class="header-nav__social">
-            <li>
-              <a href="#"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-behance"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-dribbble"></i></a>
-            </li>
-          </ul>
-        </div>
-        <!-- end header-nav__content -->
-      </nav>
-      <!-- end header-nav -->
-
-      <a class="header-menu-toggle" href="#0">
-        <span class="header-menu-text">Menu</span>
-        <span class="header-menu-icon"></span>
-      </a>
-    </header>
-    <!-- end s-header -->
-
-    <!-- home
-    ================================================== -->
-    <section
-      id="home"
-      class="s-home target-section"
-      data-parallax="scroll"
-      data-image-src="images/hero-bg.jpg"
-      data-natural-width="3000"
-      data-natural-height="2000"
-      data-position-y="center"
-    >
-      <div class="overlay"></div>
-      <div class="shadow-overlay"></div>
-
-      <div class="home-content">
-        <div class="row home-content__main">
-          <h3>Welcome</h3>
-
-          <h1>
-            Discover my projects and professional journey as a <br />
-            software developer.
-          </h1>
-
-          <div class="home-content__buttons">
-            <a
-              href="#contact"
-              class="smoothscroll btn btn--stroke"
-              style="text-align: center"
-            >
-              Download Resume
-            </a>
-            <a href="#about" class="smoothscroll btn btn--stroke">
-              More About Me
-            </a>
-          </div>
-        </div>
-
-        <div class="home-content__scroll">
-          <a href="#about" class="scroll-link smoothscroll">
-            <span>Scroll Down</span>
-          </a>
-        </div>
-
-        <div class="home-content__line"></div>
-      </div>
-      <!-- end home-content -->
-
-      <ul class="home-social">
-        <li>
-          <a href="https://www.facebook.com/sreesh.rag/"
-            ><i class="fa fa-facebook" aria-hidden="true"></i
-            ><span>Facebook</span></a
-          >
-        </li>
-        <li>
-          <a href="https://x.com/sreeshrag"
-            ><i class="fa fa-twitter" aria-hidden="true"></i
-            ><span>Twiiter</span></a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/sreeshrag"
-            ><i class="fa fa-instagram" aria-hidden="true"></i
-            ><span>Instagram</span></a
-          >
-        </li>
-        <li>
-          <a href="mailto:example@example.com"
-            ><i class="fa fa-envelope" aria-hidden="true"></i
-            ><span>Mail</span></a
-          >
-        </li>
-      </ul>
-      <!-- end home-social -->
-    </section>
-    <!-- end s-home -->
-
-    <!-- about
-    ================================================== -->
-    <section id="about" class="s-about">
-      <div class="row section-header has-bottom-sep" data-aos="fade-up">
-        <div class="col-full">
-          <h3 class="subhead subhead--dark">Hello There</h3>
-          <h1 class="display-1 display-1--light">I'm Sreeshrag</h1>
-        </div>
-      </div>
-      <!-- end section-header -->
-
-      <div class="row about-desc" data-aos="fade-up">
-        <div class="col-full">
-          <p style="font-family: 'montserrat-normal', sans-serif">
-            23-year-old software developer from Kollam, Kerala. Technology has
-            always been a passion of mine, and as a software developer, I am
-            constantly finding new ways to push the boundaries of what's
-            possible. I currently work at Cybmirror Innovations, located at
-            Kollam Technopark. In my free time, I enjoy exploring my interests
-            in art and music, which I believe add depth and perspective to my
-            work as a developer. I am driven by a desire to create innovative
-            solutions and am always looking for ways to challenge myself and
-            grow in my profession.
+            Hello, I'm Sreeshrag. I am a 23-year-old software developer from Kollam, Kerala.
+             Technology has always been a passion of mine, and as a software developer, I am constantly 
+             finding new ways to push the boundaries of what's possible. I currently work at Cybmirror Innovations,
+              located at Kollam Technopark. In my free time, I enjoy exploring my interests in art and music, which I believe add 
+              depth and perspective to my work as a developer. I am driven 
+            by a desire to create innovative solutions and am always looking for ways to challenge myself and grow in my profession.
           </p>
         </div>
-      </div>
-      <!-- end about-desc -->
 
-      <div
-        class="row about-stats stats block-1-4 block-m-1-2 block-mob-full"
-        data-aos="fade-up"
-      >
-        <div class="col-block stats__col">
-          <div class="stats__count">2</div>
-          <h5>Years of Experience</h5>
-        </div>
-        <div class="col-block stats__col">
-          <div class="stats__count">3</div>
-          <h5>Apps in Playstore</h5>
-        </div>
-        <div class="col-block stats__col">
-          <div class="stats__count">1</div>
-          <h5>App in Appstore</h5>
-        </div>
-        <div class="col-block stats__col">
-          <div class="stats__count">10</div>
-          <h5>PHP,Laravel Websites</h5>
-        </div>
-      </div>
-      <!-- end about-stats -->
-
-      <div class="about__line"></div>
-    </section>
-    <!-- end s-about -->
-
-    <!-- services
-    ================================================== -->
-    <section id="services" class="s-services">
-      <div class="row section-header has-bottom-sep" data-aos="fade-up">
-        <div class="col-full">
-          <h3 class="subhead">What I Do</h3>
-          <h1 class="display-2">
-            Cross-Platform Mobile Apps and Dynamic Websites
-          </h1>
-        </div>
-      </div>
-      <!-- end section-header -->
-
-      <div class="row services-list block-1-2 block-tab-full">
-        <div class="col-block service-item" data-aos="fade-up">
-          <div class="service-icon">
-            <i class="icon-paint-brush"></i>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
-          <div class="service-text">
-            <h3 class="h2">Flutter</h3>
-            <p
-              style="font-family: 'montserrat', sans-serif; text-align: justify"
-            >
-              I specialize in developing Flutter applications that can be
-              seamlessly published on both the App Store (iOS) and Play Store
-              (Android) from a single codebase. Flutter, a versatile and
-              powerful framework, allows me to create high-quality, performant
-              apps with a unified codebase, reducing development time and
-              ensuring consistent user experiences across platforms. This
-              cross-platform capability is particularly beneficial for
-              businesses aiming to reach a wider audience without the need for
-              separate development teams for each platform. By leveraging
-              Flutter's rich set of pre-designed widgets and its ability to
-              integrate smoothly with other technologies, I deliver applications
-              that are both visually appealing and functionally robust.
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>software Developer.</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>28 Nov 1999</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>sreeshrag.github.io/</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 70125 80020</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kollam, Kerala</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Diploma in Computer Engineering</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>sreeshrag.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
             </p>
           </div>
         </div>
 
-        <div class="col-block service-item" data-aos="fade-up">
-          <div class="service-icon">
-            <i class="icon-group"></i>
-          </div>
-          <div class="service-text">
-            <h3 class="h2">PHP,Laravel</h3>
-            <p style="font-family: 'montserrat', sans-serif; text-align: justify">
-              In addition to mobile app development, I also specialize in
-              creating dynamic websites using Core PHP and Laravel. Core PHP
-              provides a solid foundation for building custom web applications
-              with fine-tuned control over the development process. It enables
-              me to make each project stands out with its distinct features
-              and functionalities. On the other hand, Laravel, a PHP framework
-              known for its elegant syntax and developer-friendly tools,
-              enhances the efficiency of the development process. Laravel's
-              built-in features, such as routing, authentication, and database
-              management, streamline the creation of complex web applications,
-              allowing me to focus on delivering high-performance, secure, and
-              scalable solutions.
-            </p>
-          </div>
-        </div>
-
-        
       </div>
-      <!-- end services-list -->
-    </section>
-    <!-- end s-services -->
+    </section><!-- End About Section -->
 
-    <!-- works
-    ================================================== -->
-    <section id="works" class="s-works">
-      <div class="intro-wrap">
-        <div
-          class="row section-header has-bottom-sep light-sep"
-          data-aos="fade-up"
-        >
-          <div class="col-full">
-            <h3 class="subhead">Recent Works</h3>
-            <h1 class="display-2 display-2--light">
-              We love what we do, check out some of our latest works
-            </h1>
-          </div>
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
-        <!-- end section-header -->
-      </div>
-      <!-- end intro-wrap -->
 
-      <div class="row works-content">
-        <div class="col-full masonry-wrap">
-          <div class="masonry">
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-shutterbug.jpg"
-                    class="thumb-link"
-                    title="Shutterbug"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/lady-shutterbug.jpg"
-                      srcset="
-                        images/portfolio/lady-shutterbug.jpg    1x,
-                        images/portfolio/lady-shutterbug@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
+        <div class="row no-gutters">
 
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">Shutterbug</h3>
-                  <p class="item-folio__cat">Branding</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-woodcraft.jpg"
-                    class="thumb-link"
-                    title="Woodcraft"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/woodcraft.jpg"
-                      srcset="
-                        images/portfolio/woodcraft.jpg    1x,
-                        images/portfolio/woodcraft@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">Woodcraft</h3>
-                  <p class="item-folio__cat">Web Design</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-beetle.jpg"
-                    class="thumb-link"
-                    title="The Beetle Car"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/the-beetle.jpg"
-                      srcset="
-                        images/portfolio/the-beetle.jpg    1x,
-                        images/portfolio/the-beetle@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">The Beetle</h3>
-                  <p class="item-folio__cat">Web Development</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-grow-green.jpg"
-                    class="thumb-link"
-                    title="Grow Green"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/grow-green.jpg"
-                      srcset="
-                        images/portfolio/grow-green.jpg    1x,
-                        images/portfolio/grow-green@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">Grow Green</h3>
-                  <p class="item-folio__cat">Branding</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-guitarist.jpg"
-                    class="thumb-link"
-                    title="Guitarist"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/guitarist.jpg"
-                      srcset="
-                        images/portfolio/guitarist.jpg    1x,
-                        images/portfolio/guitarist@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">Guitarist</h3>
-                  <p class="item-folio__cat">Web Design</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-
-            <div class="masonry__brick" data-aos="fade-up">
-              <div class="item-folio">
-                <div class="item-folio__thumb">
-                  <a
-                    href="images/portfolio/gallery/g-palmeira.jpg"
-                    class="thumb-link"
-                    title="Palmeira"
-                    data-size="1050x700"
-                  >
-                    <img
-                      src="images/portfolio/palmeira.jpg"
-                      srcset="
-                        images/portfolio/palmeira.jpg    1x,
-                        images/portfolio/palmeira@2x.jpg 2x
-                      "
-                      alt=""
-                    />
-                  </a>
-                </div>
-
-                <div class="item-folio__text">
-                  <h3 class="item-folio__title">Palmeira</h3>
-                  <p class="item-folio__cat">Web Design</p>
-                </div>
-
-                <a
-                  href="https://www.behance.net/"
-                  class="item-folio__project-link"
-                  title="Project link"
-                >
-                  <i class="icon-link"></i>
-                </a>
-
-                <div class="item-folio__caption">
-                  <p>
-                    Vero molestiae sed aut natus excepturi. Et tempora numquam.
-                    Temporibus iusto quo.Unde dolorem corrupti neque nisi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- end masonry__brick -->
-          </div>
-          <!-- end masonry -->
-        </div>
-        <!-- end col-full -->
-      </div>
-      <!-- end works-content -->
-    </section>
-    <!-- end s-works -->
-
-    <!-- clients
-    ================================================== -->
-    <section id="clients" class="s-clients">
-      <div class="row section-header" data-aos="fade-up">
-        <div class="col-full">
-          <h3 class="subhead">Our Clients</h3>
-          <h1 class="display-2">
-            Glint has been honored to partner up with these clients
-          </h1>
-        </div>
-      </div>
-      <!-- end section-header -->
-
-      <div class="row clients-outer" data-aos="fade-up">
-        <div class="col-full">
-          <div class="clients">
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/apple.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/atom.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/blackberry.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/dropbox.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/envato.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/firefox.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/joomla.png"
-            /></a>
-            <a href="#0" title="" class="clients__slide"
-              ><img src="images/clients/magento.png"
-            /></a>
-          </div>
-          <!-- end clients -->
-        </div>
-        <!-- end col-full -->
-      </div>
-      <!-- end clients-outer -->
-
-      <div class="row clients-testimonials" data-aos="fade-up">
-        <div class="col-full">
-          <div class="testimonials">
-            <div class="testimonials__slide">
-              <p>
-                Qui ipsam temporibus quisquam vel. Maiores eos cumque distinctio
-                nam accusantium ipsum. Laudantium quia consequatur molestias
-                delectus culpa facere hic dolores aperiam. Accusantium quos qui
-                praesentium corpori. Excepturi nam cupiditate culpa doloremque
-                deleniti repellat.
-              </p>
-
-              <img
-                src="images/avatars/user-01.jpg"
-                alt="Author image"
-                class="testimonials__avatar"
-              />
-              <div class="testimonials__info">
-                <span class="testimonials__name">Tim Cook</span>
-                <span class="testimonials__pos">CEO, Apple</span>
-              </div>
-            </div>
-
-            <div class="testimonials__slide">
-              <p>
-                Excepturi nam cupiditate culpa doloremque deleniti repellat.
-                Veniam quos repellat voluptas animi adipisci. Nisi eaque
-                consequatur. Quasi voluptas eius distinctio. Atque eos maxime.
-                Qui ipsam temporibus quisquam vel.
-              </p>
-
-              <img
-                src="images/avatars/user-05.jpg"
-                alt="Author image"
-                class="testimonials__avatar"
-              />
-              <div class="testimonials__info">
-                <span class="testimonials__name">Sundar Pichai</span>
-                <span class="testimonials__pos">CEO, Google</span>
-              </div>
-            </div>
-
-            <div class="testimonials__slide">
-              <p>
-                Repellat dignissimos libero. Qui sed at corrupti expedita
-                voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                Autem eaque officia cum exercitationem sunt voluptatum
-                accusamus. Quasi voluptas eius distinctio.
-              </p>
-
-              <img
-                src="images/avatars/user-02.jpg"
-                alt="Author image"
-                class="testimonials__avatar"
-              />
-              <div class="testimonials__info">
-                <span class="testimonials__name">Satya Nadella</span>
-                <span class="testimonials__pos">CEO, Microsoft</span>
-              </div>
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> consequuntur quae</p>
             </div>
           </div>
-          <!-- end testimonials -->
-        </div>
-        <!-- end col-full -->
-      </div>
-      <!-- end client-testimonials -->
-    </section>
-    <!-- end s-clients -->
 
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact">
-      <div class="overlay"></div>
-      <div class="contact__line"></div>
-
-      <div class="row section-header" data-aos="fade-up">
-        <div class="col-full">
-          <h3 class="subhead">Contact Us</h3>
-          <h1 class="display-2 display-2--light">
-            Reach out for a new project or just say hello
-          </h1>
-        </div>
-      </div>
-
-      <div class="row contact-content" data-aos="fade-up">
-        <div class="contact-primary">
-          <h3 class="h6">Send Us A Message</h3>
-
-          <form
-            name="contactForm"
-            id="contactForm"
-            method="post"
-            action=""
-            novalidate="novalidate"
-          >
-            <fieldset>
-              <div class="form-field">
-                <input
-                  name="contactName"
-                  type="text"
-                  id="contactName"
-                  placeholder="Your Name"
-                  value=""
-                  minlength="2"
-                  required=""
-                  aria-required="true"
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactEmail"
-                  type="email"
-                  id="contactEmail"
-                  placeholder="Your Email"
-                  value=""
-                  required=""
-                  aria-required="true"
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  name="contactSubject"
-                  type="text"
-                  id="contactSubject"
-                  placeholder="Subject"
-                  value=""
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
-                <textarea
-                  name="contactMessage"
-                  id="contactMessage"
-                  placeholder="Your Message"
-                  rows="10"
-                  cols="50"
-                  required=""
-                  aria-required="true"
-                  class="full-width"
-                ></textarea>
-              </div>
-              <div class="form-field">
-                <button class="full-width btn--primary">Submit</button>
-                <div class="submit-loader">
-                  <div class="text-loader">Sending...</div>
-                  <div class="s-loader">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-
-          <!-- contact-warning -->
-          <div class="message-warning">
-            Something went wrong. Please try again.
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div>
           </div>
 
-          <!-- contact-success -->
-          <div class="message-success">
-            Your message was sent, thank you!<br />
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hard Workers</strong> rerum asperiores dolor</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alex Smith</h4>
+              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Fine Arts &amp; Graphic Design</h4>
+              <h5>2015 - 2016</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <!-- end contact-primary -->
 
-        <div class="contact-secondary">
-          <div class="contact-info">
-            <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+      </div>
+    </section><!-- End Resume Section -->
 
-            <div class="cinfo">
-              <h5>Where to Find Us</h5>
-              <p>
-                1600 Amphitheatre Parkway<br />
-                Mountain View, CA<br />
-                94043 US
-              </p>
-            </div>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
 
-            <div class="cinfo">
-              <h5>Email Us At</h5>
-              <p>
-                contact@glintsite.com<br />
-                info@glintsite.com
-              </p>
-            </div>
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
 
-            <div class="cinfo">
-              <h5>Call Us At</h5>
-              <p>
-                Phone: (+63) 555 1212<br />
-                Mobile: (+63) 555 0100<br />
-                Fax: (+63) 555 0101
-              </p>
-            </div>
-
-            <ul class="contact-social">
-              <li>
-                <a href="#"
-                  ><i class="fa fa-facebook" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fa fa-dribbble" aria-hidden="true"></i
-                ></a>
-              </li>
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
             </ul>
-            <!-- end contact-social -->
           </div>
-          <!-- end contact-info -->
         </div>
-        <!-- end contact-secondary -->
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-      <!-- end contact-content -->
-    </section>
-    <!-- end s-contact -->
+    </section><!-- End Portfolio Section -->
 
-    <!-- footer
-    ================================================== -->
-    <footer>
-      <div class="row footer-main">
-        <div class="col-six tab-full left footer-desc">
-          <div class="footer-logo"></div>
-          Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt
-          nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec,
-          egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh
-          pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor
-          accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="col-six tab-full right footer-subscribe">
-          <h4>Get Notified</h4>
-          <p>
-            Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae
-            aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt
-            iusto porro.
-          </p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-binoculars"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+        </div>
 
-          <div class="subscribe-form">
-            <form id="mc-form" class="group" novalidate="true">
-              <input
-                type="email"
-                value=""
-                name="EMAIL"
-                class="email"
-                id="mc-email"
-                placeholder="Email Address"
-                required=""
-              />
-              <input type="submit" name="subscribe" value="Subscribe" />
-              <label for="mc-email" class="subscribe-message"></label>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
+
         </div>
+
       </div>
-      <!-- end footer-main -->
+    </section><!-- End Contact Section -->
 
-      <div class="row footer-bottom">
-        <div class="col-twelve">
-          <div class="copyright">
-            <span>© Copyright Glint 2017</span>
-            <span
-              >Site Template by
-              <a href="https://www.colorlib.com/">Colorlib</a></span
-            >
-          </div>
+  </main><!-- End #main -->
 
-          <div class="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"
-              ><i class="icon-arrow-up" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <!-- end footer-bottom -->
-    </footer>
-    <!-- end footer -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+  
+  </footer><!-- End  Footer -->
 
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-      <div class="pswp__bg"></div>
-      <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
+<!--   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/65cb04db8d261e1b5f5f7cb8/1hmgglv5r';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-        <div class="pswp__ui pswp__ui--hidden">
-          <div class="pswp__top-bar">
-            <div class="pswp__counter"></div>
-            <button
-              class="pswp__button pswp__button--close"
-              title="Close (Esc)"
-            ></button>
-            <button
-              class="pswp__button pswp__button--share"
-              title="Share"
-            ></button>
-            <button
-              class="pswp__button pswp__button--fs"
-              title="Toggle fullscreen"
-            ></button>
-            <button
-              class="pswp__button pswp__button--zoom"
-              title="Zoom in/out"
-            ></button>
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
-          >
-            <div class="pswp__share-tooltip"></div>
-          </div>
-          <button
-            class="pswp__button pswp__button--arrow--left"
-            title="Previous (arrow left)"
-          ></button>
-          <button
-            class="pswp__button pswp__button--arrow--right"
-            title="Next (arrow right)"
-          ></button>
-          <div class="pswp__caption">
-            <div class="pswp__caption__center"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end photoSwipe background -->
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-      <div id="loader">
-        <div class="line-scale-pulse-out">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </div>
+</body>
 
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-  </body>
 </html>
