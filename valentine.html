@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Will You Be My Valentine? 💖</title>
+    <!-- She thought she could escape... little did she know 😏 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            min-height: 100%;
+            min-height: 100dvh;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 50%, #ff69b4 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        /* Floating Hearts Animation - Because love is in the air 💕 */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .floating-heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 20px;
+            animation: floatUp 8s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* The Big Question 🥺 */
+        .heading {
+            font-size: clamp(1.5rem, 5vw, 3.5rem);
+            color: #d63384;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+            padding: 0 10px;
+            line-height: 1.4;
+        }
+
+        .heading-mal {
+            display: block;
+            font-size: 0.6em;
+            color: #ff69b4;
+            margin-top: 10px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
+        /* Cute GIF Container */
+        .gif-container {
+            width: min(280px, 85vw);
+            height: min(220px, 60vw);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(214, 51, 132, 0.3);
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 8px;
+            flex-shrink: 0;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Buttons Container */
+        .buttons-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            min-height: 120px;
+            position: relative;
+        }
+
+        /* YES Button - The only correct answer 😌 */
+        .btn-yes {
+            padding: 18px 45px;
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #00c851 0%, #007e33 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 200, 81, 0.4);
+            transition: all 0.3s ease;
+            animation: yesGrow 3s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes yesGrow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .btn-yes:hover, .btn-yes:active {
+            transform: scale(1.12) !important;
+            box-shadow: 0 12px 35px rgba(0, 200, 81, 0.5);
+        }
+
+        /* NO Button - Nice try buddy 😂 - ALWAYS READABLE! */
+        .btn-no {
+            padding: 12px 28px;
+            font-size: clamp(0.9rem, 3.5vw, 1rem);
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            transition: all 0.15s ease;
+            white-space: nowrap;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        /* Wobble animation for NO button */
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+
+        @keyframes runAway {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9) rotate(10deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .btn-no.wobbling {
+            animation: wobble 0.3s ease;
+        }
+
+        /* Celebration Screen - YAYYYY 🎉 */
+        .celebration {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            height: 100dvh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            overflow-y: auto;
+        }
+
+        .celebration.active {
+            display: flex;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .celebration h1 {
+            font-size: clamp(1.5rem, 6vw, 3rem);
+            color: #d63384;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .celebration-gif {
+            width: min(320px, 85vw);
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(214, 51, 132, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .celebration-text {
+            font-size: clamp(0.95rem, 4vw, 1.4rem);
+            color: #6f42c1;
+            max-width: 90%;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        /* Error Popup - System error: NO not found 😏 */
+        .error-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 500;
+            text-align: center;
+            animation: shake 0.5s ease;
+            width: min(90vw, 350px);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            25% { transform: translate(-50%, -50%) rotate(-5deg); }
+            75% { transform: translate(-50%, -50%) rotate(5deg); }
+        }
+
+        .error-popup.active {
+            display: block;
+        }
+
+        .error-popup h3 {
+            color: #dc3545;
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            margin-bottom: 10px;
+        }
+
+        .error-popup p {
+            color: #666;
+            font-size: clamp(0.85rem, 3.5vw, 1rem);
+        }
+
+        .error-popup .close-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #d63384;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Music Toggle Button */
+        .music-toggle {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.3rem;
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .music-toggle:hover, .music-toggle:active {
+            transform: scale(1.1);
+        }
+
+        /* Better Mobile Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                padding-top: 70px;
+                justify-content: flex-start;
+                padding-bottom: 30px;
+            }
+
+            .heading {
+                margin-bottom: 15px;
+            }
+
+            .gif-container {
+                margin-bottom: 25px;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-yes {
+                padding: 16px 40px;
+            }
+
+            .btn-no {
+                padding: 12px 30px;
+            }
+        }
+
+        /* Landscape mobile fix */
+        @media (max-height: 500px) {
+            .container {
+                justify-content: flex-start;
+                padding-top: 20px;
+            }
+
+            .gif-container {
+                width: min(180px, 40vw);
+                height: min(140px, 35vw);
+                margin-bottom: 15px;
+            }
+
+            .heading {
+                font-size: clamp(1.2rem, 4vw, 2rem);
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Name Reveal */
+        .name-reveal {
+            color: #ff1493;
+            font-weight: bold;
+            text-decoration: underline wavy #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hearts floating everywhere because ROMANTIC VIBES 💕 -->
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <!-- Music Toggle - Soft romantic tune 🎵 -->
+    <button class="music-toggle" id="music-toggle" onclick="toggleMusic()">🔇</button>
+
+    <!-- Main Question Container -->
+    <div class="container" id="main-container">
+        <h1 class="heading">
+            Will you be my Valentine? 💖🥺
+            <span class="heading-mal">എന്റെ കൂടെ പോരുമോ? ❤️🥥</span>
+        </h1>
+
+        <!-- Cute GIF - Malayalam Classic Style! -->
+        <div class="gif-container">
+            <img src="gif.gif" alt="Mohanlal Shy Smile GIF" id="main-gif">
+        </div>
+
+        <!-- The Buttons of Destiny -->
+        <div class="buttons-container">
+            <button class="btn-yes" onclick="sayYes()">YES 💘 (പിന്നല്ലാ!)</button>
+            <button class="btn-no" id="no-btn" onmouseover="escapeButton()" onclick="handleNoClick()">NO 🙄</button>
+        </div>
+    </div>
+
+    <!-- Celebration Screen - When she finally accepts 🎉 -->
+    <div class="celebration" id="celebration">
+        <canvas id="confetti-canvas"></canvas>
+        <h1>YAYYYY 💕 സുപ്പർ! 🎉</h1>
+        <img src="gif.gif" alt="Celebration GIF" class="celebration-gif">
+        <p class="celebration-text">
+            I knew it!! You're officially my Valentine 😍💐<br><br>
+            ഇനി നമ്മൾ സെറ്റാണ്! 🕊️✨<br><br>
+            <span class="name-reveal">Sreesh</span>, you just made me the happiest person ever! 💖
+        </p>
+    </div>
+
+    <!-- Error Popup - She thought NO was an option 😂 -->
+    <div class="error-popup" id="error-popup">
+        <h3>⚠️ System Error</h3>
+        <p id="error-message">ERROR 404: NO button not found in my heart 💔😏</p>
+        <button class="close-btn" onclick="closeErrorPopup()">OK Fine 😤</button>
+    </div>
+
+    <!-- Background Music - Soft romantic tune (Replace URL with actual audio) -->
+    <audio id="bg-music" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // She thought NO was an option 😂
+        // Little does she know, the only option is YES 😌💘
+
+        const noBtn = document.getElementById('no-btn');
+        const errorPopup = document.getElementById('error-popup');
+        const errorMessage = document.getElementById('error-message');
+        const celebration = document.getElementById('celebration');
+        const mainContainer = document.getElementById('main-container');
+        const bgMusic = document.getElementById('bg-music');
+        const musicToggle = document.getElementById('music-toggle');
+
+        let escapeCount = 0;
+        let musicPlaying = false;
+
+        // Funny messages for the NO button - Kerala Style! 🥥🌴
+        const funnyMessages = [
+            "Nadakkilla 😏",
+            "Pattilla 😂",
+            "Wrong button 🤦",
+            "Odikoo 🏃💨",
+            "Sammadikkilla 😤",
+            "Sawkarym illa ✋",
+            "Pattonkil Click 🐭",
+            "He he 😁",
+            "NOOO 🚫",
+            "Odikoooooo 🌪️"
+        ];
+
+        // Error popup messages
+        const errorMessages = [
+            "ERROR 404: NO kittilla 💔😏",
+            "FATAL ERROR: Sammadikkilla 🚫💖",
+            "SYSTEM CRASH: Endammaaa! 🥰",
+            "ACCESS DENIED: YES matram 🔐💕",
+            "VIRUS: Kore neramayilla! 💘🦠"
+        ];
+
+        // Escape button logic - The NO button fears commitment 😂
+        // NO MORE SHRINKING - Always readable!
+        function escapeButton() {
+            escapeCount++;
+
+            // Change button text with funny messages
+            noBtn.textContent = funnyMessages[Math.floor(Math.random() * funnyMessages.length)];
+
+            // Add wobble animation
+            noBtn.classList.add('wobbling');
+            setTimeout(() => noBtn.classList.remove('wobbling'), 300);
+
+            // Move randomly on screen (but stay visible!)
+            const padding = 20;
+            const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+            const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+            const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
+            const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+            noBtn.style.zIndex = '50';
+        }
+
+        // Handle NO button click - Show error popup 😏
+        function handleNoClick() {
+            errorMessage.textContent = errorMessages[Math.floor(Math.random() * errorMessages.length)];
+            errorPopup.classList.add('active');
+        }
+
+        // Close error popup
+        function closeErrorPopup() {
+            errorPopup.classList.remove('active');
+        }
+
+        // YES button clicked - CELEBRATION TIME! 🎉💃
+        function sayYes() {
+            mainContainer.style.display = 'none';
+            noBtn.style.display = 'none'; // Hide that sneaky NO button
+            celebration.classList.add('active');
+            startConfetti();
+            
+            // Try to play music on user interaction
+            if (!musicPlaying) {
+                bgMusic.play().then(() => {
+                    musicPlaying = true;
+                    musicToggle.textContent = '🔊';
+                }).catch(e => console.log('Music autoplay blocked'));
+            }
+        }
+
+        // Toggle background music
+        function toggleMusic() {
+            if (musicPlaying) {
+                bgMusic.pause();
+                musicToggle.textContent = '🔇';
+                musicPlaying = false;
+            } else {
+                bgMusic.play().then(() => {
+                    musicToggle.textContent = '🔊';
+                    musicPlaying = true;
+                }).catch(e => console.log('Music blocked by browser'));
+            }
+        }
+
+        // Mobile touch support for NO button escape 📱
+        noBtn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            escapeButton();
+        }, { passive: false });
+
+        // Create floating hearts - Love is literally in the air 💕
+        function createFloatingHearts() {
+            const heartsContainer = document.getElementById('hearts-container');
+            const hearts = ['💕', '💖', '💗', '💘', '💝', '❤️', '🥰', '😍', '💐', '🌹'];
+
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                heart.style.fontSize = (Math.random() * 15 + 12) + 'px';
+                heartsContainer.appendChild(heart);
+
+                // Remove heart after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 10000);
+            }, 600);
+        }
+
+        // Confetti Animation - Party time! 🎊
+        function startConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const confettiPieces = [];
+            const colors = ['#ff69b4', '#ff1493', '#ff6b6b', '#ffd700', '#00ff7f', '#87ceeb', '#dda0dd'];
+
+            // Create confetti pieces
+            for (let i = 0; i < 150; i++) {
+                confettiPieces.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    speedY: Math.random() * 3 + 2,
+                    speedX: Math.random() * 2 - 1,
+                    rotation: Math.random() * 360
+                });
+            }
+
+            function animateConfetti() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                confettiPieces.forEach(piece => {
+                    ctx.save();
+                    ctx.translate(piece.x, piece.y);
+                    ctx.rotate(piece.rotation * Math.PI / 180);
+                    ctx.fillStyle = piece.color;
+                    ctx.fillRect(-piece.size / 2, -piece.size / 2, piece.size, piece.size);
+                    ctx.restore();
+
+                    piece.y += piece.speedY;
+                    piece.x += piece.speedX;
+                    piece.rotation += 2;
+
+                    // Reset confetti when it goes off screen
+                    if (piece.y > canvas.height) {
+                        piece.y = -10;
+                        piece.x = Math.random() * canvas.width;
+                    }
+                });
+
+                requestAnimationFrame(animateConfetti);
+            }
+
+            animateConfetti();
+        }
+
+        // Initialize floating hearts
+        createFloatingHearts();
+
+        // Handle window resize for canvas
+        window.addEventListener('resize', () => {
+            const canvas = document.getElementById('confetti-canvas');
+            if (canvas) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        });
+
+        // Easter egg: Press 'L' for extra love 💕
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'l') {
+                document.body.style.animation = 'pulse 0.5s ease';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 500);
+            }
+        });
+
+        // Console message for the curious developer 👀
+        console.log("🌹 Looking for bugs? The only bug here is LOVE 💕");
+        console.log("🔍 Fun fact: There's no escape. She will say YES 😏");
+    </script>
+
+</body>
+</html>
